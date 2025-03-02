@@ -208,7 +208,7 @@ class Controller:
                     await self._driver.connect(self._mac, timeout=self._timeout)
             except Exception:
                 if i == self._retries:
-                    raise Exception
+                    raise
 
     async def _connect_and_write_parameters(self, parameters: dict, force: bool = False) -> None:
         """Write parameter to device with auto connect."""
